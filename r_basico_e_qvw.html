@@ -1014,12 +1014,46 @@ body .markdown-body
     page-break-after: avoid;
   }
 }
-</style><title>r_basico</title></head><body><article class="markdown-body"><h1 id="workshop-dcgf"><a name="user-content-workshop-dcgf" href="#workshop-dcgf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Workshop DCGF</h1>
+</style><title>r_basico_e_qvw</title></head><body><article class="markdown-body"><h1 id="workshop-dcgf"><a name="user-content-workshop-dcgf" href="#workshop-dcgf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Workshop DCGF</h1>
 <h2 id="roteiro-r-basico"><a name="user-content-roteiro-r-basico" href="#roteiro-r-basico" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Roteiro R básico</h2>
-<h3 id="primeiro-exemplo-mde"><a name="user-content-primeiro-exemplo-mde" href="#primeiro-exemplo-mde" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Primeiro exemplo: MDE</h3>
+<h4 id="primeiro-exemplo-mde"><a name="user-content-primeiro-exemplo-mde" href="#primeiro-exemplo-mde" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Primeiro exemplo: MDE</h4>
 <p>mde.R  </p>
 <p>Evidenciar aplicação simples, ganhos de automatização e de reprodutibilidade.<br />
 Falar sobre as funções e operções utilizadas. O que é &lsquo;&lt;-&lsquo;? O que ela faz?<br />
 O código simples esconde complexidade.</p>
-<h3 id="objetos-estruturas-e-funcoes-basicas"><a name="user-content-objetos-estruturas-e-funcoes-basicas" href="#objetos-estruturas-e-funcoes-basicas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Objetos, estruturas e funções básicas</h3>
-<p>tipos_e_estruturas.R</p></article></body></html>
+<h4 id="objetos-estruturas-e-funcoes-basicas"><a name="user-content-objetos-estruturas-e-funcoes-basicas" href="#objetos-estruturas-e-funcoes-basicas" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Objetos, estruturas e funções básicas</h4>
+<p>tipos_e_estruturas.R</p>
+<h2 id="qlikview"><a name="user-content-qlikview" href="#qlikview" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Qlikview</h2>
+<h4 id="quadro-loa"><a name="user-content-quadro-loa" href="#quadro-loa" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Quadro LOA</h4>
+<ul>
+<li>Carregar Quadro LOA &gt; Arquivos de Tabela</li>
+<li>Criar tabela com GRUPO, expressão <br />
+  IF(FONTE=10, &lsquo;RECURSOS DO TESOURO&rsquo;, &lsquo;RECURSOS DE OUTRAS FONTES&rsquo;) e <br />
+  SUM(IF(MODALIDADE_COD &lt;&gt; 91, VALOR_EMPENHADO)</li>
+<li>Formatar a tabela</li>
+<li>Criar tabela INLINE com GRUPO_COD, GRUPO_DESC, CATEG_DESC</li>
+<li>Recarregar, mostrar CTRL + T</li>
+<li>Substituir GRUPO_COD por GRUPO_DESC na tabela</li>
+<li>Incluir CATEG_DESC na tabela</li>
+</ul>
+<h4 id="concatenate"><a name="user-content-concatenate" href="#concatenate" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Concatenate</h4>
+<p>Incluir dados da execução de 2015 na tabela.</p>
+<ul>
+<li>Incluir dados sem &lsquo;Concatenate&rsquo;.</li>
+<li>Falar sobre colunas em comum entre as duas tabelas.</li>
+<li>Mostrar quantidade de chaves (keys) criadas pelo Qlikview.</li>
+<li>Evidenciar que esta forma de carregar os dados é equivalente a criar um<br />
+  PROCV (relação horizontal) com uma chave grande, mas observado que todas as linhas de ambas as <br />
+  tabelas estejam no resultado final.</li>
+<li>Como se tratam de tabelas muito semelhantes, cujas colunas são essencialmente<br />
+  as mesmas, uma forma melhor de relacioná-las é o empilhamento (relação vertical).</li>
+<li>Isso equivale a colar uma tabela embaixo da outra, observando que a ordem das<br />
+  colunas esteja correta.</li>
+<li>Isto é feito no QlikView através do comando &lsquo;Concatenate&rsquo;.</li>
+<li>Aplicar o comando e evidenciar que agora só &lsquo;GRUPO_COD&rsquo; é uma chave.</li>
+<li>Mostrar que a tabela agora contém valores que não fazem sentido (somam LOA + execução).</li>
+<li>Para separá-los, precisamos de algo que identifique qual é qual.</li>
+<li>Para isso, podemos criar uma coluna ao ler cada base.</li>
+<li>Incluir &lsquo;LOA&rsquo; as BASE e &lsquo;EXEC&rsquo; as BASE.</li>
+<li>Utilizá-las como dimensão na tabela.</li>
+</ul></article></body></html>
